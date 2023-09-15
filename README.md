@@ -1,7 +1,10 @@
-# SpinalHDL Base Project
+# SystemRDL generation demo
 
-This repository is a base project to help Spinal users set-up project without knowledge about Scala and SBT.
+In this repository you can find an example SpinalHDL design with RegIf interface
+exported to SystemRDL.
 
+You can find other SystemRDL demos
+[here](https://github.com/MarekPikula/SystemRDL-demo).
 
 ## If it is your are learning SpinalHDL
 
