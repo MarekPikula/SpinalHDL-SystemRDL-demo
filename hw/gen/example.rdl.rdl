@@ -1,0 +1,43 @@
+// SystemRDL 2.0 register description for some_register_map
+// Generated from SpinalHDL RegIf definition. Don't edit.
+// Date: Sat Sep 16 00:44:08 CEST 2023
+
+addrmap some_register_map {
+    name = "RDL Example Registers";
+    desc = "This address map contains some example registers to show how RDL can be utilized in various situations";
+
+    default hw = rw;
+    default sw = rw;
+
+    reg {
+        name = "chip_id_reg";
+        desc = "This register cotains the part # and revision # for XYZ ASIC";
+
+        field {
+            name = "rev_num";
+            desc = "This field represents the chips revision number";
+            reset = 0x1;
+            sw = r;
+        } rev_num[3:0];
+
+        field {
+            name = "part_num";
+            desc = "This field represents the chips part number";
+            reset = 0x1234567;
+            sw = r;
+        } part_num[31:4];
+    } chip_id_reg @ 0x0;
+
+    reg {
+        name = "enable";
+        desc = "Toggle the peripheral enable on write";
+
+        field {
+            name = "enable";
+            desc = "Enable toggle";
+            reset = 0x0;
+            sw = rw;
+            onwrite = wot;
+        } enable[0:0];
+    } enable @ 0x4;
+};
