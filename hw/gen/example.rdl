@@ -1,6 +1,6 @@
 // SystemRDL 2.0 register description for some_register_map
 // Generated from SpinalHDL RegIf definition. Don't edit.
-// Date: Sat Sep 16 01:35:26 CEST 2023
+// Date: Sat Sep 16 02:33:30 CEST 2023
 
 addrmap some_register_map {
     name = "RDL Example Registers";

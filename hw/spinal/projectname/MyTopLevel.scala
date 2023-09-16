@@ -13,7 +13,7 @@ case class MyTopLevel() extends Component {
     val enable = out Bool ()
   }
 
-  val busif = AxiLite4BusInterface(io.axi, (0, 4 Bytes))
+  val busif = AxiLite4BusInterface(io.axi, (0, 8 Bytes))
 
   val chip_id_reg = busif.newReg("This register contains the part # and revision # for XYZ ASIC")
   val rev_num = chip_id_reg.field(Bits(4 bits), RO, 1, "This field represents the chip's revision number") := 1
